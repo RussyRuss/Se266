@@ -83,7 +83,7 @@ li {
     </button>
     <div class="dropdown-content" id="myDropdown">
       <a href="../week1/index.php">Assignment 1</a>
-      <a href="../week2/index.php">Assignment 2</a>
+      <a href="../week2/index.php">Paitient Intake 2</a>
       <a href="../week3/index.php">Assignment 3</a>
       <a href="../week4/index.php">Assignment 4</a>
       <a href="../week5/index.php">Assignment 5</a>
@@ -95,9 +95,9 @@ li {
     </div>
     
   </div> 
-  <a href="../site/heroku_resources.php">Heroku Resources</a>
-  <a href="../site/php_resources.php">PHP Resources</a>
-  <a href="../site/git_resources.php">Git Resources</a>
+  <a href="https://dashboard.heroku.com/apps/se266-russ">Heroku Resources</a>
+  <a href="https://www.php.net/manual/en/language.types.resource.php">PHP Resources</a>
+  <a href="https://resources.github.com/all/">Git Resources</a>
   <a href="https://github.com/RussyRuss/Se266">My GitHub Repo</a>
 </div>
 <script>
@@ -118,7 +118,7 @@ window.onclick = function(e) {
 </script>
 <h1>PHP and MySQL - Russel Souffrant</h1>
     <p>
-    Welcome to my PHP and MySQL page. You can find an overview of all my working PHP projects along with my code.
+    My name Is Russel SOuffrant and Welcome to my PHP and MySQL page. Here  You can find an overview of all my working PHP projects along with my code.
     </p>
     <h2>Assignment Overview</h2>
 <ul>

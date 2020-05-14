@@ -1,4 +1,4 @@
-<?php include __DIR__ . '/../include/header.php'; ?>
+<?php include 'index.php'; ?>
     
     <h2>Git Resources</h2>
           
@@ -10,5 +10,5 @@
        
    
    
-   <?php include __DIR__ . '/../include/footer.php'; ?>
-   © 2020 GitHub, Inc.
+   <?php include 'footer.php'; ?>
+  

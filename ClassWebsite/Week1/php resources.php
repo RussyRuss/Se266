@@ -1,4 +1,4 @@
-<?php include __DIR__ . '/../include/header.php'; ?>
+<?php include 'index.php'; ?>
     
     
       <h2>PHP Resources</h2>
@@ -10,4 +10,4 @@
       </ul> 
        
         
-      <?php include __DIR__ . '/../include/footer.php'; ?>
+      <?php include 'footer.php'; ?>

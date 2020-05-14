@@ -1,3 +1,116 @@
+<?php
+
+<?php
+//Validation will go here...
+
+function isDate($dt) {
+
+    try {
+
+        $d = new DateTime($dt);
+
+        return (true);
+
+    } catch(Exception $e) {
+
+        return false;
+
+    }
+
+}
+
+/*
+Is the first name a non-empty string
+Is the last name a non-empty string
+Was the married field filled out?
+Is the birth date a valid date?
+Is the height a valid number?
+Is the weight a valid number?   
+*/
+
+//#######################################################
+
+function bmi($feet, $inches, $weight){
+        
+    $feetToInches = $feet * 12 + $inches;
+
+
+    $meters = $feetToInches * 0.0254;
+    $kg = $weight / 2.20462;
+
+    $bMI = $kg / ($meters * $meters);
+
+    return $bMI;
+
+}
+
+function bmiDescription($bMI){
+
+    $result = "";
+    if ($bMI < 18.5){
+
+        $result = "Underweight";
+
+    }else if ($bMI > 18.5 && $bMI < 24.9){
+
+        $result = "Normal Weight";
+
+    }else if ($bMI > 25 && $bMI < 29.9){
+
+        $result = "Overweight";
+
+    }else{
+
+        $result = "Obesity";
+    }
+
+    return $result;
+
+}
+
+function age ($bdate) {
+
+    $date = new DateTime($bdate);
+
+    $now = new DateTime();
+
+    $interval = $now->diff($date);
+
+
+
+    return $interval->y;
+
+}
+
+if (isset($_POST["submit"])) {
+
+    $fname = filter_input (INPUT_POST, "fname");
+    $lname = filter_input (INPUT_POST, "lname");
+    $maritual = filter_input(INPUT_POST, "married");
+    $dob = filter_input (INPUT_POST, "dob");
+    $ft = filter_input (INPUT_POST, "feet");
+    $in = filter_input (INPUT_POST, "inches");
+    $wgt = filter_input (INPUT_POST, "weight");
+
+    $patient_age = age($dob);
+
+    $bodymass = bmi($ft, $in, $wgt);
+    $cleanmass = (round($bodymass, 1));
+
+    $done = bmiDescription($bodymass);
+
+
+
+
+} else {
+
+}
+
+?>
+
+  ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,99 +124,156 @@
   }
 </style>
 <body>
-<?php
-  $fnameErr = $lnameErr = $dobErr = $feetErr = $inchesErr = $weightErr = "";
-  $fname = $lname = $dob = $feet = $inches = $weight = "";
-
-  if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    if(empty($_POST["fname"])){
-      $fnameErr = "First Name Required";
-    }else {
-      $fname = test_input($_POST["First"]);
-    }
-
-    if(empty($_POST["lname"])){
-      $lnameErr = "Last Name Required";
-    }else {
-      $fname = test_input($_POST["Last"]);
-    }
-
-    if(empty($_POST["dob"])){
-      $dobErr = "Date Required";
-    }else {
-      $fname = test_input($_POST["Dob"]);
-    }
-
-    if(empty($_POST["feet"])){
-      $feetErr = "feet Required";
-    }else {
-      $feet = test_input($_POST["Feet"]);
-    }
-
-    if(empty($_POST["inches"])){
-      $inchesErr = "inches Required";
-    }else {
-      $inches = test_input($_POST["Inches"]);
-    }
-    
-    
-    
-    
-    $lname = test_input($_POST["lname"]);
-    $dob = test_input($_POST["dob"]);
-    $height = test_input($_POST["feet"]);
-    $inches = test_input($_POST["inches"]);
-    $weight = test_input($_POST["weight"]);
-  }
-  
-  function test_input($data) {
-    $data = trim($data);
-    $data = stripslashes($data);
-    $data = htmlspecialchars($data);
-    return $data;
-  }
-  ?>
-  
-  <h2>PHP Form Validation Example</h2>
-  <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"> 
 <h2>Patient Intake Form</h2>
-<p>Complete the form with valid information</p>
+<p>Complete the form with valid information.</p>
+<hr>
 <form name="patient-form" method="post" action="patient.php">
   <div class="content">
     <div>
       <label>First Name: </label>
       <input type="text" name="fname">
     </div>
+
     <div>
       <label>Last Name: </label>
-      <input type="text" name="lname"> 
+      <input type="text" name="lname" > 
     </div>
+
     <div>
-      <label for="married">Married Status: </label>
+      <label for="married">Maritual Status: </label>
       <select name="married">
-        <option value="yes">Yes</option>
-        <option value="no">No</option>
+        <option value="Yes">Yes</option>
+        <option value="No" selected>No</option>
       </select>
     </div>
+
     <div>
       <label>Birth Date: </label>
-      <input type="text" name="dob">
+      <input type="date" name="dob">
     </div>
+
     <div>
       <label>Height: </label>
           <label>Feet: </label>
-          <input type="text" name="feet">
+          <input type="number" min="1" max="7" name="feet" size="4px">
           <label>Inches: </label>
-          <input type="text" name="inches">
+          <input type="number" min="1" max="11" name="inches" size="4px">
     </div>
+
     <div>
       <label>Weight: </label>
-      <input type="text" name="weight">
+      <input type="decimal" name="weight" size="4px">
     </div>
+
     <input type="submit" name="submit" value="Submit Form">
   </div>
 </form>
-   
+<?php
+    //Validation will go here...
+
+    function isDate($dt) {
+
+        try {
+
+            $d = new DateTime($dt);
+
+            return (true);
+
+        } catch(Exception $e) {
+
+            return false;
+
+        }
+
+    }
+    
+    /*
+    Is the first name a non-empty string
+    Is the last name a non-empty string
+    Was the married field filled out?
+    Is the birth date a valid date?
+    Is the height a valid number?
+    Is the weight a valid number?   
+    */
+
+    //#######################################################
+
+    function bmi($feet, $inches, $weight){
+            
+        $feetToInches = $feet * 12 + $inches;
+
+
+        $meters = $feetToInches * 0.0254;
+        $kg = $weight / 2.20462;
+
+        $bMI = $kg / ($meters * $meters);
+
+        return $bMI;
+
+    }
+
+    function bmiDescription($bMI){
+
+        $result = "";
+        if ($bMI < 18.5){
+
+            $result = "Underweight";
+
+        }else if ($bMI > 18.5 && $bMI < 24.9){
+
+            $result = "Normal Weight";
+
+        }else if ($bMI > 25 && $bMI < 29.9){
+
+            $result = "Overweight";
+
+        }else{
+
+            $result = "Obesity";
+        }
+
+        return $result;
+
+    }
+
+    function age ($bdate) {
+
+        $date = new DateTime($bdate);
+
+        $now = new DateTime();
+
+        $interval = $now->diff($date);
+
+ 
+
+        return $interval->y;
+
+    }
+
+    if (isset($_POST["submit"])) {
+
+        $fname = filter_input (INPUT_POST, "fname");
+        $lname = filter_input (INPUT_POST, "lname");
+        $maritual = filter_input(INPUT_POST, "married");
+        $dob = filter_input (INPUT_POST, "dob");
+        $ft = filter_input (INPUT_POST, "feet");
+        $in = filter_input (INPUT_POST, "inches");
+        $wgt = filter_input (INPUT_POST, "weight");
+
+        $patient_age = age($dob);
+    
+        $bodymass = bmi($ft, $in, $wgt);
+        $cleanmass = (round($bodymass, 1));
+    
+        $done = bmiDescription($bodymass);
+    
+
+
+
+    } else {
+
+    }
+
+?>
 </body>
 </html>
-

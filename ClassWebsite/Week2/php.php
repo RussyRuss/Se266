@@ -1,4 +1,5 @@
 <?php
+        
     function isDate($dt) {
 
         try {

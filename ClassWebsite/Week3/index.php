@@ -117,24 +117,47 @@ window.onclick = function(e) {
 }
 </script>
 <h1>PHP and MySQL - Russel Souffrant</h1>
-    <p>
-    Welcome to my PHP and MySQL page. You can find an overview of all my working PHP projects along with my code.
-    </p>
-    <h2>Assignment Overview</h2>
-<ul>
-        <li><a href="../week1/index.php">Week 1</a></li>
-        <li><a href="../week2/index.php">Week 2</a></li>
-        <li><a href="../week3/index.php">Week 3</a></li>
-        <li><a href="../week4/index.php">Week 4</a></li>
-        <li><a href="../week5/index.php">Week 5</a></li>
-        <li><a href="../week6/index.php">Week 6</a></li>
-        <li><a href="../week7/index.php">Week 7</a></li>
-        <li><a href="../week8/index.php">Week 8</a></li>
-        <li><a href="../week9/index.php">Week 9</a></li>
-        <li><a href="../week10/index.php">Week 10</a></li>
+<p>Complete the form with valid information.</p>
+    <h2>Patient Intake form </h2>
+    <form name="patient-form" method="post" action="patient.php">
+  <div class="content">
+    <div>
+      <label>First Name: </label>
+      <input type="text" name="fname">
+    </div>
 
+    <div>
+      <label>Last Name: </label>
+      <input type="text" name="lname" > 
+    </div>
 
-        </ul>
+    <div>
+      <label for="married">Maritual Status: </label>
+      <select name="married">
+        <option value="Yes">Yes</option>
+        <option value="No" selected>No</option>
+      </select>
+    </div>
+
+    <div>
+      <label>Birth Date: </label>
+      <input type="date" name="dob">
+    </div>
+    <div>
+      <label>Height: </label>
+          <label>Feet: </label>
+          <input type="number" min="1" max="7" name="feet" size="4px">
+          <label>Inches: </label>
+          <input type="number" min="1" max="11" name="inches" size="4px">
+    </div>
+
+    <div>
+      <label>Weight: </label>
+      <input type="decimal" name="weight" size="4px">
+    </div>
+
+    <input type="submit" name="submit" value="Submit Form">
+  </div>
         <hr>
         "
             File last Updated May 11 2020 9:06:48 pm

@@ -1,6 +1,4 @@
 <?php
-    //Validation will go here...
-
     function isDate($dt) {
 
         try {

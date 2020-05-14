@@ -95,7 +95,13 @@ li {
     </div>
     
   </div> 
+  <div class="dropdown">
+    <button class="dropbtn" onclick="dropDown()">Russ
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content" id="myDropdown1">
   <a href="https://dashboard.heroku.com/apps/se266-russ">Heroku Resources</a>
+  
   <a href="https://www.php.net/manual/en/language.types.resource.php">PHP Resources</a>
   <a href="https://resources.github.com/all/">Git Resources</a>
   <a href="https://github.com/RussyRuss/Se266">My GitHub Repo</a>
@@ -120,7 +126,9 @@ window.onclick = function(e) {
     <p>
     My name Is Russel SOuffrant and Welcome to my PHP and MySQL page. Here  You can find an overview of all my working PHP projects along with my code.
     </p>
+    
     <h2>Assignment Overview</h2>
+    
 <ul>
         <li><a href="../week1/index.php">Week 1</a></li>
         <li><a href="../week2/index.php">Week 2</a></li>

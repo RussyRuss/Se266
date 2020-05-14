@@ -113,4 +113,5 @@ window.onclick = function(e) {
     }
   }
 }
+<?php include 'index.php'; ?>
 </script>

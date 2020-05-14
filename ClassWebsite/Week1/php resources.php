@@ -1,40 +1,13 @@
-<?php
-$titles = true;
-$titles = 10;
+<?php include __DIR__ . '/../include/header.php'; ?>
+    
+    
+      <h2>PHP Resources</h2>
+       
+      <ul>
+        <li><a href="https://phpdelusions.net/pdo">(The only proper) PDO tutorial</a></li> 
+        <li><a href= "https://phptherightway.com/">PHP The right way</a></li> 
 
-$myList = array('Chicken', 'fish', 'rice', 'steak', 'soda');
-$myListLength = count($myList);
+      </ul> 
+       
         
-$titles = array('rocks', 'is cool', 'stinks');
-
-
-if ( is_int($titles) ) {
-    $title = 'my page title is 10';
-} else {
-    $title = 'my page title';
-}
-
-
-$rand = rand(0, 2);
-$title = 'my page title ' . $titles[$rand];
-
-
-?>
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title><?php echo $title; ?></title>
-    </head>
-    <body>
-        <h1><?php echo $title; ?></h1>
-        
-        <ul>   
-        <?php for ($index = 0; $index < $myListLength; $index++): ?>
-            <li><?php echo $myList[$index] ?> </li>    
-        <?php endfor; ?>
-        </ul> 
-               
-        
-    </body>
-</html>
+      <?php include __DIR__ . '/../include/footer.php'; ?>

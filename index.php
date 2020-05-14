@@ -95,7 +95,7 @@ li {
     </div>
     
   </div> 
-  <a href="https://dashboard.heroku.com/apps/se266-russ">Heroku Resources</a>
+  <a href="../week1/heroku_resources.php">Heroku Resources</a>
   <a href="https://www.php.net/manual/en/language.types.resource.php">PHP Resources</a>
   <a href="https://resources.github.com/all/">Git Resources</a>
   <a href="https://github.com/RussyRuss/Se266">My GitHub Repo</a>

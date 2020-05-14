@@ -95,9 +95,9 @@ li {
     </div>
     
   </div> 
-  <a href="../site/heroku_resources.php">Heroku Resources</a>
-  <a href="../site/php_resources.php">PHP Resources</a>
-  <a href="../site/git_resources.php">Git Resources</a>
+  <a href="../week1/heroku_resources.php">Heroku Resources</a>
+  <a href="../week1/php_resources.php">PHP Resources</a>
+  <a href="../week1/git_resources.php">Git Resources</a>
   <a href="https://github.com/RussyRuss/Se266">My GitHub Repo</a>
 </div>
 <script>

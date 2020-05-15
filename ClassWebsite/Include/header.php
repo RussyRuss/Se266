@@ -3,7 +3,7 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <title>SE 266 - Erik van Renselaar</title>
+  <title>SE 266 - Russel Souffrant</title>
 <style>
 p.a {
   
@@ -82,7 +82,7 @@ li {
     </button>
     <div class="dropdown-content" id="myDropdown">
       <a href="../week1/index.php">Assignment 1</a>
-      <a href="../week2/index.php">Assignment 2</a>
+      <a href="../week2/index.php">Patient Intake Form</a>
       <a href="../week3/index.php">Assignment 3</a>
       <a href="../week4/index.php">Assignment 4</a>
       <a href="../week5/index.php">Assignment 5</a>
@@ -96,7 +96,7 @@ li {
   <a href="../site/heroku_resources.php">Heroku Resources</a>
   <a href="../site/php_resources.php">PHP Resources</a>
   <a href="../site/git_resources.php">Git Resources</a>
-  <a href="https://github.com/hvanrenselaar/se266-spring-2020">My GitHub Repo</a>
+  <a href="https://github.com/RussyRuss/Se266">My GitHub Repo</a>
 </div>
 <script>
 /* When the user clicks on the button, 

@@ -4,8 +4,8 @@
       <h2>Heroku Resources</h2>
        
       <ul>
-        <li><a href="https://devcenter.heroku.com/articles/getting-started-with-php">Getting Started on Heroku with PHP</a></li> 
-        <li><a href= "Preparing a Codebase for Heroku Deployment">Preparing a Codebase for Heroku Deployment</a></li> 
+        <li><a href="https://gitguys.com/git-resources/">Git Guys</a></li> 
+        <li><a href= "https://help.github.com/en/github/getting-started-with-github/git-and-github-learning-resources">Help Git</a></li> 
       </ul> 
        
         

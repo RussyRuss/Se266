@@ -21,6 +21,7 @@
     <div>
       <label>First Name: </label>
       <input type="text" name="fname">
+     
     </div>
 
     <div>

@@ -1,7 +1,29 @@
 <?php include __DIR__ . '/../include/header.php'; ?>
 
 <?php
-        
+    
+   
+
+    function checkNum($height){
+        if($height>8){
+            throw new Exeption("value must be 8 or Below");
+        }
+        return true;
+    }
+
+    function checkNum2($inches){
+        if($inches>11){
+            throw new Exeption("value must be 11 or Below");
+        }
+        return true;
+    }
+
+    
+    
+
+
+
+
     function isDate($dt) {
 
         try {
@@ -104,7 +126,7 @@
     } else {
 
     }
-
+   
 ?>
 
 <?php include __DIR__ . '/../include/footer.php'; ?>

@@ -1,4 +1,4 @@
-<?php include __DIR__ . '/../include/header.php'; ?>
+<?php include __DIR__ . '/../Include/header.php'; ?>
     
     
       <h2>Heroku Resources</h2>
@@ -9,5 +9,5 @@
       </ul> 
        
         
-<?php include __DIR__ . '/../include/footer.php'; ?>
+<?php include __DIR__ . '/../Include/footer.php'; ?>
 © 2020 GitHub, Inc.

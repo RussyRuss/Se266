@@ -1,4 +1,4 @@
-<?php include __DIR__ . '/../include/header.php'; ?>
+<?php include __DIR__ . '/../Include/header.php'; ?>
     
 <h1>PHP and MySQL -Russel Souffrant</h1>
 <p>
@@ -21,4 +21,4 @@ Russel's PHP and MySQL page that will present to you my assignments through out 
     
 
     
-  <?php include __DIR__ . '/../include/footer.php'; ?>
+  <?php include __DIR__ . '/../Include/footer.php'; ?>

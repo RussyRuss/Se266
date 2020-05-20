@@ -2,7 +2,7 @@
 
 <?php
     
-   
+    
 
     function checkNum($height){
         if($height>8){
@@ -17,11 +17,6 @@
         }
         return true;
     }
-
-    
-    
-
-
 
 
     function isDate($dt) {

@@ -82,8 +82,8 @@ li {
     </button>
     <div class="dropdown-content" id="myDropdown">
       <a href="../week1/index.php">Assignment 1</a>
-      <a href="../week2/index.php">Patient Intake Form</a>
-      <a href="../week3/index.php">Assignment 3</a>
+      <a href="../week2/patient_form.php">Patient Intake Form</a>
+      <a href="../week3/atm.php">ATM Calculator</a>
       <a href="../week4/index.php">Assignment 4</a>
       <a href="../week5/index.php">Assignment 5</a>
       <a href="../week6/index.php">Assignment 6</a>
@@ -113,5 +113,4 @@ window.onclick = function(e) {
     }
   }
 }
-<?php include 'index.php'; ?>
 </script>

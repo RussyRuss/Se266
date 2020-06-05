@@ -81,7 +81,7 @@
 <div class="container">
     
   <h2>Add Patient</h2>
-  <form class="form-horizontal" action="editPatients.php" method="post">
+  <form class="form-horizontal" action="addPatient.php" method="post">
       <input type="text" name="action" value="<?php echo $action; ?>">
       <input type="text" name="patientId" value="<?php echo $id; ?>">
       

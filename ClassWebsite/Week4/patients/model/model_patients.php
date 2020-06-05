@@ -52,21 +52,23 @@ function updatePatient($f, $l, $m, $b,$id)
 
     return $results;
 }
-function deletePatient($id){
+
+function deletePatient ($id) {
     global $db;
-    $results = "data was not deleted";
+    
+    $results = "Data was not deleted";
     $stmt = $db->prepare("DELETE FROM patient WHERE id=:id");
-    $binds =  array(
-        ":id"=> $id
-    );
-
-    if($stmt->execute($binds) && $stmt->rowCount() > 0){
-        $results = "Rows deleted";
+    
+    $stmt->bindValue(':id', $id);
+        
+    if ($stmt->execute() && $stmt->rowCount() > 0) {
+        $results = 'Data Deleted';
     }
-
-    return $results;
-
+    
+    return ($results);
 }
+
+
 function getPatient ($id) {
     global $db;
    
@@ -82,18 +84,19 @@ function getPatient ($id) {
     return ($result);
 }
 //updatePatient('TTTT', 'hh', 1,'2020-5-29', 13 );
-//deletePatient(13)
+//deletePatient(13);
+
 function addPatientInfo($mID,$id, $md, $pw, $ph, $bps, $bpd)
 {
     global $db;
     $results = "Not added";
 
 
-    $stmt = $db->prepare("INSERT INTO patientMeasurements SET patientMeasurementId = :measurementsID, patientId = :patID, patientMeasurementDate = :measurementDate ,patientWeight = :patientweight, patientHeight = :patientheight, patientBPSystolic = :patientBPS, patientBPDialstolic = :patientBPD");
-4
+    $stmt = $db->prepare("INSERT INTO patientMeasurements SET patientMeasurementId = :measurementsID, patientId = :patientID, patientMeasurementDate = :measurementDate ,patientWeight = :patientweight, patientHeight = :patientheight, patientBPSystolic = :patientBPS, patientBPDialstolic = :patientBPD");
+
     $binds = array(
         ":measurementsID" => $mID,
-        ":patID" => $id,
+        ":patientID" => $id,
         ":measurementDate" => $md,
         ":patientweight" => $pw,
         ":patientheight" => $ph,

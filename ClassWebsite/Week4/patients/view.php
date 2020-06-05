@@ -1,3 +1,6 @@
+
+
+
 <html lang="en">
 <head>
   <title>View Patients</title>
@@ -71,7 +74,9 @@
         
         <br />
         <a href="addPatient.php?action=add">Add Patient</a>
+        
     </div>
     </div>
 </body>
 </html>
+

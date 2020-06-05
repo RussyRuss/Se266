@@ -10,7 +10,7 @@ Russel's PHP and MySQL page that will present to you my assignments through out 
     <li><a href="../Week1/index.php">Week 1</a></li>
     <li><a href="../Week2/patient_form.php">Week 2</a></li>
     <li><a href="../Week3/index.php">Week 3</a></li>
-    <li><a href="../week4/index.php">Week 4</a></li>
+    <li><a href="../week4/view.php">Week 4</a></li>
     <li><a href="../week5/index.php">Week 5</a></li>
     <li><a href="../week6/index.php">Week 6</a></li>
     <li><a href="../week7/index.php">Week 7</a></li>

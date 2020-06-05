@@ -36,13 +36,13 @@
             <tbody>
            
             
-            <?php foreach ($patients as $row): ?>
+            <?php foreach ($patient as $row): ?>
                 <tr>
                     
-                    <td><?php echo $row['First Name']; ?></th>
-                    <td><?php echo $row['Last Name']; ?></th>
-                    <td><?php echo $row['Married']; ?></th>
-                    <td><?php echo $row['DOB']; ?></db>
+                    <td><?php echo $row['patientFirstName']; ?></th>
+                    <td><?php echo $row['patientLastName']; ?></th>
+                    <td><?php echo $row['patientMarried']; ?></th>
+                    <td><?php echo $row['patientBirthDate']; ?></db>
                 </tr>
                 
             <?php endforeach; ?>

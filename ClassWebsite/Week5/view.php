@@ -20,7 +20,7 @@
         $patient = getPatients();
         
         if (isPostRequest()) {
-            $id = filter_input(INPUT_POST, 'patientID');
+            $id = filter_input(INPUT_POST, 'id');
             deletePatient ($id);
 
         }
@@ -46,7 +46,7 @@
                 <tr>
                     <td>
                     <form action="view.php" method="post">
-                    <input type="hidden" name="patientID" value="<?php echo $row['id'];?>">
+                    <input type="hidden" name="id" value="<?php echo $row['id'];?>">
                     <button class="btn glyphicon glyphicon-trash" type="submit"></button>
                     </form>
                     </td>

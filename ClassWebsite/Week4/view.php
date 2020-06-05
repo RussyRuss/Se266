@@ -18,7 +18,7 @@
         <?php
         
         include __DIR__ . '/model/model_patients.php';
-        include __DIR__ . '/functions.php';
+        //include __DIR__ . '/functions.php';
         $patient = getPatients();
 
    
@@ -36,36 +36,21 @@
             <tbody>
            
             
-            <?php foreach ($patient as $row): ?>
-         
+            <?php foreach ($patients as $row): ?>
                 <tr>
-                    <td>
-                    <form action="view.php" method="post">
-                    <input type="hidden" name="id" value="<?php echo $row['id'];?>">
-                    <button class="btn glyphicon glyphicon-trash" type="submit"></button>
-                    </form>
-                    </td>
-                    <td><?php echo $row['patientFirstName']; ?></td>
-                    <td><?php echo $row['patientLastName']; ?></td>-->
-                    <td><?php 
-                    if($row['patientMarried'] == 1){
-                     $status = "YES";
-                     echo $status;
-                    }
-                     else
-                    {
-                     $status = "NO";
-                     echo $status; } ?></td>    
-                    <td><?php echo $row['patientBirthDate']; ?></td>
-                   
-                    <td><a href="addPatient.php?action=update&id=<?php echo $row['id']; ?>">Edit</a></td>           
+                    
+                    <td><?php echo $row['First Name']; ?></th>
+                    <td><?php echo $row['Last Name']; ?></th>
+                    <td><?php echo $row['Married']; ?></th>
+                    <td><?php echo $row['DOB']; ?></db>
                 </tr>
+                
             <?php endforeach; ?>
             </tbody>
         </table>
         
         <br />
-        <a href="addPatient.php?action=add">Add Patient</a>
+        <a href="addPatient.php">>Add Patient</a>
         
     </div>
     </div>

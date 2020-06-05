@@ -1,3 +1,5 @@
+
+
 <?php
 include (__DIR__ . '/db.php');
 
@@ -109,4 +111,6 @@ function addPatientInfo($mID,$id, $md, $pw, $ph, $bps, $bpd)
         $results = "Data Added";
     }
 }
+
 ?>
+

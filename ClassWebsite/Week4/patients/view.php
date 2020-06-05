@@ -35,7 +35,7 @@
             <thead>
                 <tr>
                     
-                    <th>FirstName</th>
+                    <th>First Name</th>
                     <th>Last Name</th>
                     <th>Married</th>
                     <th>DOB</db>

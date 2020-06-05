@@ -1,18 +1,5 @@
  
-    <?php
-        
-        include __DIR__ . '/model/model_patients.php';
-        include __DIR__ . '/functions.php';
-        $patient = getPatients();
-        
-        if (isPostRequest()) {
-            $id = filter_input(INPUT_POST, 'id');
-            deletePatient ($id);
-
-        }
-
-        
-    ?>
+   
 <html lang="en">
 <head>
   <title>View Patients</title>
@@ -27,8 +14,15 @@
         
     <div class="col-sm-offset-2 col-sm-10">
         <h1>Patients</h1>
+
+        <?php
+        
+        include __DIR__ . '/model/model_patients.php';
+        include __DIR__ . '/functions.php';
+        $patient = getPatients();
+
    
-  
+    ?>
     <table class="table table-striped">
             <thead>
                 <tr>

@@ -16,7 +16,7 @@ function getPatients () {
     return $results;
 }
 
-function addPatient ($f, $l, $m, $b) {
+function addPatient($id, $f, $l, $m, $b) {
     global $db;
     $results = "Not added";
 

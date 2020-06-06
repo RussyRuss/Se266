@@ -5,12 +5,8 @@
         if (isPostRequest()) {
 
           $patient = filter_input(INPUT_POST, 'patient');
-
-          
-
-          $id = filter_input(INPUT_POST, 'patientFirstName');
-
-          $result = addPatient ($patient, $id);
+          $firstName = filter_input(INPUT_POST, 'patientFirstName');
+          $result = addPatient ($patient, $firstName);
 
           
 
@@ -30,15 +26,12 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 </head>
 <body>
-   
 
-    
 <div class="container">
     
   <h2>Add Patient</h2>
+
   <form class="form-horizontal" action="addPatient.php" method="post">
-      <input type="text" name="action">
-      <input type="text" name="patientId">
       
     <div class="form-group">
       <label class="control-label col-sm-2" for="first name">First Name:</label>

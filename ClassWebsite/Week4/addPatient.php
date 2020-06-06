@@ -1,3 +1,4 @@
+<?php include __DIR__ . '/../Include/header.php'; ?>
 <?php
         
         include __DIR__ . '/model/model_patients.php';

@@ -1,4 +1,5 @@
 <?php
+
 include (__DIR__ . '/db.php');
 
 function getPatients() {
@@ -12,7 +13,7 @@ function getPatients() {
     }
     return $results;
 }
-//F = first name l = last name m = married b = birthdate
+
 function addPatient($f, $l, $m, $b){
     global $db;
     $results = "Not added";
@@ -83,8 +84,7 @@ function getPatient ($id) {
     
     return ($result);
 }
-//updatePatient('TTTT', 'hh', 1,'2020-5-29', 13 );
-//deletePatient(13);
+
 
 function addPatientInfo($mID,$id, $md, $pw, $ph, $bps, $bpd)
 {

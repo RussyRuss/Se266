@@ -1,5 +1,3 @@
- 
-   
 <html lang="en">
 <head>
   <title>View Patients</title>
@@ -14,20 +12,28 @@
         
     <div class="col-sm-offset-2 col-sm-10">
         <h1>Patients</h1>
-
-        <?php
+        <td>Double Click to Delete</td>
+    
+    <?php
         
         include __DIR__ . '/model/model_patients.php';
-        //include __DIR__ . '/functions.php';
+        include __DIR__ . '/functions.php';
         $patient = getPatients();
+        
+        if (isPostRequest()) {
+            $id = filter_input(INPUT_POST, 'patientID');
+            deletePatient ($id);
 
-   
+        }
+
+        
     ?>
+  
     <table class="table table-striped">
             <thead>
                 <tr>
                     
-                    <th>First Name</th>
+                    <th>FirstName</th>
                     <th>Last Name</th>
                     <th>Married</th>
                     <th>DOB</db>
@@ -37,23 +43,36 @@
            
             
             <?php foreach ($patient as $row): ?>
+         
                 <tr>
-                    
-                    <td><?php echo $row['patientFirstName']; ?></th>
-                    <td><?php echo $row['patientLastName']; ?></th>
-                    <td><?php echo $row['patientMarried']; ?></th>
-                    <td><?php echo $row['patientBirthDate']; ?></db>
+                    <td>
+                    <form action="view.php" method="post">
+                    <input type="hidden" name="patientID" value="<?php echo $row['id'];?>">
+                    <button class="btn glyphicon glyphicon-trash" type="submit"></button>
+                    </form>
+                    </td>
+                    <td><?php echo $row['patientFirstName']; ?></td>
+                    <td><?php echo $row['patientLastName']; ?></td>-->
+                    <td><?php 
+                    if($row['patientMarried'] == 1){
+                     $status = "YES";
+                     echo $status;
+                    }
+                     else
+                    {
+                     $status = "NO";
+                     echo $status; } ?></td>    
+                    <td><?php echo $row['patientBirthDate']; ?></td>
+                   
+                    <td><a href="addPatient.php?action=update&id=<?php echo $row['id']; ?>">Edit</a></td>           
                 </tr>
-                
             <?php endforeach; ?>
             </tbody>
         </table>
         
         <br />
-        <a href="addPatient.php">>Add Patient</a>
-        
+        <a href="addPatient.php?action=add">Add Patient</a>
     </div>
     </div>
 </body>
 </html>
-

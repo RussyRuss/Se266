@@ -63,7 +63,7 @@
                     {
                      $status = "NO";
                      echo $status; } ?></td> 
-                     <td> YOU MUST ENTER DATE</td>   
+                     
                     <td><?php echo $row['patientBirthDate']; ?></td>
                    
                     <td><a href="addPatient.php?action=update&id=<?php echo $row['id']; ?>">Edit</a></td>           

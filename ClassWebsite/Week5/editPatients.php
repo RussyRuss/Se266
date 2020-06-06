@@ -128,26 +128,5 @@
 </div>
 
 
-<div>
-<h2>Patient Measurments</h2>
-<form action="form.php" method="post">
-        Feet: <input type="number" name="feet" value="<?php echo  $feet; ?>" />
-        
-        <br>
-        Inches: <input type="number" name="inches" value="<?php echo  $inches; ?>" />
-        <br>
-        Weight: <input type="number" name="weight" value="<?php echo  $weight; ?>" />
-        <br>
-        Temperature: <input type="number" name="temp" value="<?php echo  $temp; ?>"/>
-        <br>
-        Bloodpressure systolic: <input type="number" name="systolicBP" value="<?php echo  $sysBP; ?>"/>
-        <br>
-        Bloodpressure diastolic: <input type="number" name="diastolicBP" value="<?php echo  $diaBP; ?>"/>
-        <input type="submit" name="btnSubmit" />
-    <?php ?>
-    </form>
-
-</div>
-
 </body>
 </html>

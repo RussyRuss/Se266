@@ -1,6 +1,5 @@
-
 <?php
-        include __DIR__ . '/../Include/header.php';
+        
         include __DIR__ . '/model/model_patients.php';
         include __DIR__ . '/functions.php';
         
@@ -128,6 +127,27 @@
   <div class="col-sm-offset-2 col-sm-10"><a href="./view.php">View patient</a></div>
 </div>
 
+
+<div>
+<h2>Patient Measurments</h2>
+<form action="form.php" method="post">
+        Feet: <input type="number" name="feet" value="<?php echo  $feet; ?>" />
+        
+        <th>
+        Inches: <input type="number" name="inches" value="<?php echo  $inches; ?>" />
+        <th>
+        Weight: <input type="number" name="weight" value="<?php echo  $weight; ?>" />
+        <th>
+        Temperature: <input type="number" name="temp" value="<?php echo  $temp; ?>"/>
+        <th>
+        Bloodpressure systolic: <input type="number" name="systolicBP" value="<?php echo  $sysBP; ?>"/>
+        <th>
+        Bloodpressure diastolic: <input type="number" name="diastolicBP" value="<?php echo  $diaBP; ?>"/>
+        <input type="submit" name="btnSubmit" />
+    <?php  ?>
+    </form>
+
+</div>
 
 </body>
 </html>

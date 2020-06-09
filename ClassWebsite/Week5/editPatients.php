@@ -1,9 +1,40 @@
+<?php include __DIR__ . '/../Include/header.php'; ?>
 <?php
         
         include __DIR__ . '/model/model_patients.php';
         include __DIR__ . '/functions.php';
         
-     
+        if (isPostRequest() && isset($_POST['btnSubmit'])) {
+            
+          $id = filter_input(INPUT_POST, 'hiddenvar');        
+          $temp = filter_input(INPUT_POST, 'temp');
+          $sysBP = filter_input(INPUT_POST, 'systolicBP');
+          $diaBP = filter_input(INPUT_POST, 'diastolicBP');
+          $height = filter_input(INPUT_POST, 'height');
+          $weight = filter_input(INPUT_POST, 'weight');
+          $date = date("y-m-d");
+
+          $result = addPatientInfo($id, $date, $weight, $height, $sysBP, $diaBP, $temp);
+      }
+
+      // let's figure out if we're doing update or add
+      if (isset($_GET['action'])) {
+          $action = filter_input(INPUT_GET, 'action');
+          $id = filter_input(INPUT_GET, 'id');
+          if ($action == "update") {
+              $row = getPatients($id);
+              $f = $row['firstName'];
+              $l = $row['lastName'];
+              $dob = $row['DOB'];
+              $m = $row['married'];
+          } else {
+              $firstName = "";
+              $lastName = "";
+              $dob = "";
+              $marriage = "";
+          }
+      
+      }
    
     $feet = "";
     $inches = "";
@@ -73,6 +104,34 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <style type = "text/css">
+  .wrapper {
+            display: grid;
+            grid-template-columns: 180px 400px;
+        }
+
+        .measurementWrapper {
+            width: 600px;
+            display: flex;
+            flex-wrap: wrap;
+            margin-left: 40px;
+        }
+        .measurementWrapper > div {
+            flex: 1 1 100px;
+        }
+        .label {
+            text-align: right;
+            padding-right: 10px;
+            margin-bottom: 5px;
+            background-color: white;
+            color: black;
+        }
+        label {
+           font-weight: bold;
+        }
+        input[type=text] {width: 120px;}
+        .error {color: red;}
+    </style>
 </head>
 <body>
    
@@ -100,6 +159,9 @@
     </div>
 
     <div class="form-group">
+    <div style="margin-left:50px;">
+    <h2> Patient Measurements</h2>
+    </div>
       <label class="control-label col-sm-2" for="Patient Name">Patient Marital Status:</label>
       <div class="col-sm-10">
         <input type="radio" class="form-control" id="married"  name="married" value="1">
@@ -119,6 +181,7 @@
     <div class="form-group">        
       <div class="col-sm-offset-2 col-sm-10">
         <button type="submit" class="btn btn-default"><?php echo $action; ?> Patient</button>
+        <button type="submit" class="btn btn-default"><?php echo $action; ?> Delete Patient</button>
        
       </div>
     </div>
@@ -126,22 +189,22 @@
   
   <div class="col-sm-offset-2 col-sm-10"><a href="./view.php">View patient</a></div>
 </div>
-
-
 <div>
+<div style="margin-left:50px;">
+    <h2> Patient Measurements</h2>
+    </div>
 <h2>Patient Measurments</h2>
 <form action="form.php" method="post">
         Feet: <input type="number" name="feet" value="<?php echo  $feet; ?>" />
-        
-        <th>
+        <br>
         Inches: <input type="number" name="inches" value="<?php echo  $inches; ?>" />
-        <th>
+        <br>
         Weight: <input type="number" name="weight" value="<?php echo  $weight; ?>" />
-        <th>
+        <br>
         Temperature: <input type="number" name="temp" value="<?php echo  $temp; ?>"/>
-        <th>
+        <br>
         Bloodpressure systolic: <input type="number" name="systolicBP" value="<?php echo  $sysBP; ?>"/>
-        <th>
+        <br>
         Bloodpressure diastolic: <input type="number" name="diastolicBP" value="<?php echo  $diaBP; ?>"/>
         <input type="submit" name="btnSubmit" />
     <?php  ?>

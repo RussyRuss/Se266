@@ -96,16 +96,16 @@
    
     var_dump ($schools);
     
-    //   $b = checkLogin('donald', 'duck');
-    //    if ($b) echo "Logged in"; else echo "Not logged in";
+       $b = checkLogin('donald', 'duck');
+        if ($b) echo "Logged in"; else echo "Not logged in";
 
-    // insertSchoolsFromFile('../uploads/schools.csv');
-    // $count= getSchoolCount();
-    // echo $count;
+     insertSchoolsFromFile('../uploads/schools.csv');
+     $count= getSchoolCount();
+     echo $count;
    
     
     
     
-    // if ($result) echo "Logged in"; else echo "Not logged in";
+     if ($result) echo "Logged in"; else echo "Not logged in";
     
    

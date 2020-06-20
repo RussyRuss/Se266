@@ -4,37 +4,7 @@
         include __DIR__ . '/model/model_patients.php';
         include __DIR__ . '/functions.php';
         
-        if (isPostRequest() && isset($_POST['btnSubmit'])) {
-            
-          $id = filter_input(INPUT_POST, 'hiddenvar');        
-          $temp = filter_input(INPUT_POST, 'temp');
-          $sysBP = filter_input(INPUT_POST, 'systolicBP');
-          $diaBP = filter_input(INPUT_POST, 'diastolicBP');
-          $height = filter_input(INPUT_POST, 'height');
-          $weight = filter_input(INPUT_POST, 'weight');
-          $date = date("y-m-d");
-
-          $result = addPatientInfo($id, $date, $weight, $height, $sysBP, $diaBP, $temp);
-      }
-
-      // let's figure out if we're doing update or add
-      if (isset($_GET['action'])) {
-          $action = filter_input(INPUT_GET, 'action');
-          $id = filter_input(INPUT_GET, 'id');
-          if ($action == "update") {
-              $row = getPatients($id);
-              $f = $row['firstName'];
-              $l = $row['lastName'];
-              $dob = $row['DOB'];
-              $m = $row['married'];
-          } else {
-              $firstName = "";
-              $lastName = "";
-              $dob = "";
-              $marriage = "";
-          }
-      
-      }
+       
    
     $feet = "";
     $inches = "";
@@ -190,9 +160,7 @@
   <div class="col-sm-offset-2 col-sm-10"><a href="./view.php">View patient</a></div>
 </div>
 <div>
-<div style="margin-left:50px;">
-    <h2> Patient Measurements</h2>
-    </div>
+
 <h2>Patient Measurments</h2>
 <form action="form.php" method="post">
         Feet: <input type="number" name="feet" value="<?php echo  $feet; ?>" />

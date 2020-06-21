@@ -82,16 +82,14 @@ li {
     </button>
     <div class="dropdown-content" id="myDropdown">
       <a href="../week1/index.php">Main Page</a>
-      <a href="../week1/index.php">Main Page</a>
-      <a href="../week2/patient_form.php">Patient Intake Form</a>
-      <a href="../week3/atm.php">ATM Calculator</a>
-      <a href="../final_Project/index.php">Final Project</a> 
+      
     </div>
   </div> 
-  <a href="../site/heroku_resources.php">Proposal</a>
-  <a href="../site/php_resources.php">Prototype</a>
-  <a href="../site/git_resources.php">Table Design</a>
-  <a href="https://github.com/RussyRuss/Se266">Tech Spec</a>
+  <a href="../final_project/index.php">Proposal</a>
+  <a href="https://marvelapp.com/project/5023144/design/70479863">Prototype</a>
+  <a href="../final_project/table_design.php">Table Design</a>
+  <a href="../final_project/tech_spec.php">Tech Spec</a>
+  
   <a href="https://github.com/RussyRuss/Se266">Heroku</a>
   <a href="https://github.com/RussyRuss/Se266">Git Repository</a>
   

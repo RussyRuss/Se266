@@ -98,6 +98,7 @@ li {
   <a href="../site/php_resources.php">PHP Resources</a>
   <a href="../site/git_resources.php">Git Resources</a>
   <a href="https://github.com/RussyRuss/Se266">My GitHub Repo</a>
+  <a href="../final_project/index.php">Final Project Proposal</a>
   
 </div>
 <script>

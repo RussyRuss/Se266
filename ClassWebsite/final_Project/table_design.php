@@ -19,31 +19,18 @@ body {
 
 
 
-<h1>Project Description</h1> 
+<h1>Primary Table</h1> 
 
-<h2>I will be proposing a dynamic web site that will present the techniques learned this semester for Php and Mysql.<br>
-My site will be named Rusty Exotics. In my site i will give the user his/her option to create a vehicle class, where<br> 
-they will be able to select a wide variety of vehicles and store them into a tabel. They will also have the ability<br> 
-to delete, update, and edit their entrees. Within the site i will give the user the ability to make their own login<br> 
-to their table. This site will display customizations and creations done by their creative owners. In this site you<br> 
-will see the skills i have learn through out the course to the best of my ability
+<h2>CREATE TABLE IF NOT EXISTS users (id INT UNSIGNED AUTO_INCREMENT NOT NULL PRIMARY KEY,<br>        
+  userFirstName VARCHAR(50) DEFAULT NULL,<br>         
+  userLastName VARCHAR(50) DEFAULT NULL,<br>        
+  userBirthDate DATE) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1;<br><h2>
 
-<h1>Funtionality</h1>
-<ul style="font-size:21px">
-  <li>Add/Update/Delete/Edit Vehicle</li>
-  <li>Vehicle Images</li>
-  <li>User Login</li>
-  <li>ListBox</li>
-  <li>Forms</li>
-  <li>Uploads</li>
-  
-</ul>  
-
-<h1>Development PlatForm</h1>
-
-<h2>For this site i will be coding in PHP a popular general-purpose scripting language that is especially suited to web development<br>
- and will also using an open-source relational database management system called MySQL. At the top of my site i will be leaving a link to Heroku Where you may view past projects<br>
-  </h2>
-
+<h1>Secsandary Table </h1>
+<h2>CREATE TABLE IF NOT EXISTS Vehicles (id INT UNSIGNED AUTO_INCREMENT NOT NULL PRIMARY KEY,<br>        
+  vehicleMake VARCHAR(50) DEFAULT NULL,<br>         
+  vehicleModel VARCHAR(50) DEFAULT NULL,<br>         
+  vehicleYear VARCHAR(50) DEFAULT NULL,<br>         
+  VehicleColor DATE) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1;<br><h2>
     
   <?php include __DIR__ . '/../include/footer.php'; ?>

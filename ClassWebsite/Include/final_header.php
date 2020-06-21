@@ -21,7 +21,7 @@ body {
 }
 .navbar a {
   float: left;
-  font-size: 16px;
+  font-size: 20px;
   color: white;
   text-align: center;
   padding: 17px 19px;
@@ -56,7 +56,7 @@ body {
 .dropdown-content a {
   float: none;
   color: black;
-  padding: 12px 16px;
+  padding: 20px 20px;
   text-decoration: none;
   display: block;
   text-align: left;
@@ -81,23 +81,19 @@ li {
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-content" id="myDropdown">
-      <a href="../week1/index.php">Assignment 1</a>
+      <a href="../week1/index.php">Main Page</a>
+      <a href="../week1/index.php">Main Page</a>
       <a href="../week2/patient_form.php">Patient Intake Form</a>
       <a href="../week3/atm.php">ATM Calculator</a>
-      <a href="../week4/index.php">Patients</a>
-      <a href="../week5/index.php">Assignment 5</a>
-      <a href="../week6/index.php">Assignment 6</a>
-      <a href="../week7/index.php">Assignment 7</a>
-      <a href="../week8/index.php">Assignment 8</a>
-      <a href="../week9/index.php">Assignment 9</a>
-      <a href="../week10/index.php">Assignment 10</a> 
       <a href="../final_Project/index.php">Final Project</a> 
     </div>
   </div> 
-  <a href="../site/heroku_resources.php">Heroku Resources</a>
-  <a href="../site/php_resources.php">PHP Resources</a>
-  <a href="../site/git_resources.php">Git Resources</a>
-  <a href="https://github.com/RussyRuss/Se266">My GitHub Repo</a>
+  <a href="../site/heroku_resources.php">Proposal</a>
+  <a href="../site/php_resources.php">Prototype</a>
+  <a href="../site/git_resources.php">Table Design</a>
+  <a href="https://github.com/RussyRuss/Se266">Tech Spec</a>
+  <a href="https://github.com/RussyRuss/Se266">Heroku</a>
+  <a href="https://github.com/RussyRuss/Se266">Git Repository</a>
   
 </div>
 <script>

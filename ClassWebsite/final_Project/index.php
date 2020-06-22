@@ -4,7 +4,7 @@
 <style>
 body {
   border: 50px solid powderblue;
-  padding: 250px;
+  padding: 20px;
 }
 </style>
 

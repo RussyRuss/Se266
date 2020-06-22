@@ -24,7 +24,7 @@ body {
   font-size: 20px;
   color: white;
   text-align: center;
-  padding: 17px 19px;
+  padding: 20px 50px;
   text-decoration: none;
 }
 .dropdown {
@@ -33,7 +33,7 @@ body {
 }
 .dropdown .dropbtn {
   cursor: pointer;
-  font-size: 16px;  
+  font-size: 23px;  
   border: none;
   outline: none;
   color: white;
@@ -56,7 +56,7 @@ body {
 .dropdown-content a {
   float: none;
   color: black;
-  padding: 20px 20px;
+  padding: 12px 16px;
   text-decoration: none;
   display: block;
   text-align: left;
@@ -86,7 +86,7 @@ li {
     </div>
   </div> 
   <a href="../final_project/index.php">Proposal</a>
-  <a href="https://marvelapp.com/project/5023144/design/70479863">Prototype</a>
+  <a href="https://marvelapp.com/b0ig9e1">Prototype</a>
   <a href="../final_project/table_design.php">Table Design</a>
   <a href="../final_project/tech_spec.php">Tech Spec</a>
   

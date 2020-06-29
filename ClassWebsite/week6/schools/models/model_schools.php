@@ -1,5 +1,5 @@
 <?php
-
+    
     include (__DIR__ . '/db.php');
     
     function insertSchoolsFromFile ($fname) {
@@ -10,7 +10,7 @@
 
         deleteAllSchools();
         $file = fopen ($fname, 'rb');
-        // ignore first line
+        
         $row = fgetcsv($file);
         
         while (!feof($file) && $i++ < 10000) {
@@ -20,7 +20,7 @@
             $state = str_replace("'", "''", htmlspecialchars ($row[2]));
 
             $sql[] = "('" . $school . "' , '" . $city . "' , '" . $state. "')";
-            // 1,000 records at a time
+            
             if ($i % 1000 == 0) {
                 $db->query('INSERT INTO schools (schoolName, schoolCity, schoolState) VALUES '.implode(',', $sql));
                 $sql = array();
@@ -77,11 +77,11 @@
         return ($results);
    }
    
-   function checkLogin ($userName, $password) {
+   function checkLogin ($username, $password) {
     global $db;
-    $stmt = $db->prepare("SELECT id FROM users WHERE userName =:userName AND userPassword = :password");
+    $stmt = $db->prepare("SELECT id FROM users WHERE username =:username AND password = :password");
 
-    $stmt->bindValue(':userName', $userName);
+    $stmt->bindValue(':username', $username);
     $stmt->bindValue(':password', sha1($password));
     
     $stmt->execute ();
@@ -96,16 +96,16 @@
    
     var_dump ($schools);
     
-       $b = checkLogin('donald', 'duck');
-        if ($b) echo "Logged in"; else echo "Not logged in";
+    //   $b = checkLogin('donald', 'duck');
+     //   if ($b) echo "Logged in"; else echo "Not logged in";
 
-     insertSchoolsFromFile('../uploads/schools.csv');
-     $count= getSchoolCount();
-     echo $count;
+    // insertSchoolsFromFile('../uploads/schools.csv');
+    // $count= getSchoolCount();
+    // echo $count;
    
     
     
     
-     if ($result) echo "Logged in"; else echo "Not logged in";
+     //if ($result) echo "Logged in"; else echo "Not logged in";
     
    

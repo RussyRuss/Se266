@@ -1,16 +1,16 @@
 <?php
     include_once __DIR__ . "/models/model_schools.php";
-    include_once __DIR__ . "/include/functions.php";
+    include_once __DIR__ . "/includes/functions.php";
    
     
-     $schoolName = "";
+    $schoolName = "";
     $city = "";
     $state = "";
     if (isPostRequest()) {
     // your search logic goes here. Call getSchools with the appropriate arguments
       
     }
-    include_once __DIR__ . "/include/header.php";
+    include_once __DIR__ . "/includes/header.php";
 ?>
 
             <h2>Search Schools</h2>
@@ -36,6 +36,6 @@
             <p>This is where your search results go</p>
             <?php
             
-                include_once __DIR__ . "/include/footer.php";
+                include_once __DIR__ . "/includes/footer.php";
             ?>
         

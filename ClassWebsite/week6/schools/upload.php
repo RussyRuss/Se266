@@ -1,13 +1,13 @@
 <?php
     include_once __DIR__ . "/models/model_schools.php";
-    include_once __DIR__ . "/include/functions.php";
+    include_once __DIR__ . "/includes/functions.php";
     
     if (isset ($_FILES['file1'])) {
         // upload the file to uploads folder and then call insertSchoolsFromFile 
         
         //redirect to search.php
     }
-    include_once __DIR__ . "/include/header.php";
+    include_once __DIR__ . "/includes/header.php";
 
 ?>  
     <h2>Upload File</h2>
@@ -22,5 +22,5 @@
     </form>    
 
 <?php
-    include_once __DIR__ . "/include/footer.php";
+    include_once __DIR__ . "/includes/footer.php";
 ?>

@@ -89,14 +89,14 @@
     
 }
  
-
+ //var_dump ($checkLogin("donald, duck"));
    // make sure these functions work
     //$schools = getSchools ('New England', '', 'RI');
    
-   // var_dump ($schools);
+    //var_dump ($schools);
     
-    //   $b = checkLogin('donald', 'duck');
-    //    if ($b) echo "Logged in"; else echo "Not logged in";
+       //$b = checkLogin('donald', 'duck');
+       // if ($b) echo "Logged in"; else echo "Not logged in";
 
     // insertSchoolsFromFile('../uploads/schools.csv');
     // $count= getSchoolCount();

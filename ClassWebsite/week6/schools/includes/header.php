@@ -5,8 +5,11 @@
       //the user should be good leave them there
     }
     else{
-      //send the user to the logoff pageto delete all the session vars and try to make them login again 
+      //send the user to the logoff page to delete all the session vars and try to make them login again 
+
+      header('Location: logoff.php');
     }
+  
 ?>
 <!DOCTYPE html>
 <html lang="en">

@@ -1,15 +1,23 @@
 <?php
     include_once __DIR__ . "/models/model_schools.php";
     include_once __DIR__ . "/includes/functions.php";
-   
     
+    $schools = [];
+
     $schoolName = "";
     $city = "";
     $state = "";
+
     if (isPostRequest()) {
-    // your search logic goes here. Call getSchools with the appropriate arguments
-      
+        // your search logic goes here. Call getSchools with the appropriate arguments
+        $schoolName = filter_input(INPUT_POST, 'schoolName');
+        $city = filter_input(INPUT_POST, 'city');
+        $state = filter_input(INPUT_POST, 'state');
+
+        $schools = getSchools($schoolName, $city, $state);
+        
     }
+    
     include_once __DIR__ . "/includes/header.php";
 ?>
 
@@ -33,7 +41,35 @@
                </div>
             </form>
             
-            <p>This is where your search results go</p>
+            <?php if(isPostRequest()): ?>
+
+        <p>Found <?php echo count($schools) ?> schools</p>
+
+    <table>
+
+        <thead>
+            <tr>
+                <th>School Name</th>
+                <th>City</th>
+                <th>State</th>
+            </tr>
+        </thead>
+
+        <tbody>
+        
+        <?php foreach ($schools as $row): ?>
+            <tr>
+                <td><?php echo $row['schoolName']; ?></td>
+                <td><?php echo $row['schoolCity']; ?></td>
+                <td><?php echo $row['schoolState']; ?></td> 
+                            
+            </tr>
+        <?php endforeach; ?>
+        </tbody>
+
+    </table>
+
+        <?php endif;?>
             <?php
             
                 include_once __DIR__ . "/includes/footer.php";

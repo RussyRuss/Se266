@@ -51,7 +51,7 @@
             </div>
             <div class="rowContainer">
                 <div class="col1">User Name:</div>
-                <div class="col2"><input type="text" name="userName" value="donald"></div> 
+                <div class="col2"><input type="text" name="username" value="donald"></div> 
             </div>
             <div class="rowContainer">
                 <div class="col1">Password:</div>

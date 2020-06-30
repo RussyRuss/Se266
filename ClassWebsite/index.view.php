@@ -6,6 +6,13 @@
 </head>
 <body>
 
+<h1>To Due List</h1>
+    <ul>
+        <?php foreach ($task as $key => $feature) : ?>
+            <li><?= $feature; ?></li>
+        <?php endforeach; ?>
+    </ul>
+
 </body>
 </html>
 

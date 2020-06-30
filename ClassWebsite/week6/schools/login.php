@@ -1,17 +1,30 @@
 <?php
-include_once __DIR__ . "/includes/header.php";
-include_once __DIR__ . "/models/model_schools.php";
-include_once __DIR__ . "/includes/functions.php";
+    
+    //start the session 
+    session_start();
+
+    include_once __DIR__ . "/models/model_schools.php";
+    include_once __DIR__ . "/includes/functions.php";
+    $error = false;
+
     
 
     if (isPostRequest()) {
-        $username = filter_input(INPUT_POST, 'userName');
+        $username = filter_input(INPUT_POST, 'username');
         $password = filter_input(INPUT_POST, 'password');
-       
-        //your logic here
-        
-    
+
+        if (checkLogin ($username, $password)){
+
+            $_SESSION['Login'] = "true";
+
+            header('Location: upload.php');
+        } else{
+
+            $_SESSION['Login'] = "false";
+            $error = "true";
+        }
     }
+   
 ?>
 
 <!DOCTYPE html>
@@ -38,7 +51,7 @@ include_once __DIR__ . "/includes/functions.php";
             </div>
             <div class="rowContainer">
                 <div class="col1">User Name:</div>
-                <div class="col2"><input type="text" name="username" value="donald"></div> 
+                <div class="col2"><input type="text" name="userName" value="donald"></div> 
             </div>
             <div class="rowContainer">
                 <div class="col1">Password:</div>

@@ -1,5 +1,5 @@
 <?php
-    
+
     include (__DIR__ . '/db.php');
     
     function insertSchoolsFromFile ($fname) {
@@ -10,7 +10,6 @@
 
         deleteAllSchools();
         $file = fopen ($fname, 'rb');
-        
         $row = fgetcsv($file);
         
         while (!feof($file) && $i++ < 10000) {
@@ -20,7 +19,7 @@
             $state = str_replace("'", "''", htmlspecialchars ($row[2]));
 
             $sql[] = "('" . $school . "' , '" . $city . "' , '" . $state. "')";
-            
+            // 1,000 records at a time
             if ($i % 1000 == 0) {
                 $db->query('INSERT INTO schools (schoolName, schoolCity, schoolState) VALUES '.implode(',', $sql));
                 $sql = array();
@@ -92,12 +91,12 @@
  
 
    // make sure these functions work
-    $schools = getSchools ('New England', '', 'RI');
+    //$schools = getSchools ('New England', '', 'RI');
    
-    var_dump ($schools);
+   // var_dump ($schools);
     
     //   $b = checkLogin('donald', 'duck');
-     //   if ($b) echo "Logged in"; else echo "Not logged in";
+    //    if ($b) echo "Logged in"; else echo "Not logged in";
 
     // insertSchoolsFromFile('../uploads/schools.csv');
     // $count= getSchoolCount();
@@ -106,6 +105,5 @@
     
     
     
-     //if ($result) echo "Logged in"; else echo "Not logged in";
+    // if ($result) echo "Logged in"; else echo "Not logged in";
     
-   

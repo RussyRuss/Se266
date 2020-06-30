@@ -1,119 +1,54 @@
+<?php
+    session_start();
+
+    if($_SESSION['Login']== "true"){
+      //the user should be good leave them there
+    }
+    else{
+      //send the user to the logoff pageto delete all the session vars and try to make them login again 
+    }
+?>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <title>SE 266 - Russel Souffrant</title>
-<style>
-p.a {
-  
-}
-body {
-  font-family: "Times New Roman", Times, serif;
-  font-size: "16px;";
-  margin-left: 20px;
-  margin-right: 10px;
-}
-.navbar {
-  overflow: hidden;
-  background-color: #333;
-  font-family: Arial, Helvetica, sans-serif;
-}
-.navbar a {
-  float: left;
-  font-size: 20px;
-  color: white;
-  text-align: center;
-  padding: 20px 50px;
-  text-decoration: none;
-}
-.dropdown {
-  float: left;
-  overflow: hidden;
-}
-.dropdown .dropbtn {
-  cursor: pointer;
-  font-size: 23px;  
-  border: none;
-  outline: none;
-  color: white;
-  padding: 14px 16px;
-  background-color: inherit;
-  font-family: inherit;
-  margin: 0;
-}
-.navbar a:hover, .dropdown:hover .dropbtn, .dropbtn:focus {
-  background-color: red;
-}
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-.dropdown-content a {
-  float: none;
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
-}
-.dropdown-content a:hover {
-  background-color: #ddd;
-}
-.show {
-  display: block;
-}
-li {
-  font-family: "Times New Roman", Times, serif;
-  font-size: "16px;";
-}
-</style>
+  <title>Schools upload and search</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style type="text/css">
+        #mainDiv {margin-left: 100px; margin-top: 100px;}
+        .col1 {width: 100px; float: left;}
+        .col2 {float: left;}
+        .rowContainer {clear: left; height: 40px;}
+        .error {margin-left: 100px; clear: left; height: 40px; color: red;}
+        .footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: black;
+            color: white;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-<div class="navbar">
-  
-  <div class="dropdown">
-    <button class="dropbtn" onclick="dropDown()">Assignments
-      <i class="fa fa-caret-down"></i>
-    </button>
-    <div class="dropdown-content" id="myDropdown">
-      <a href="../week1/index.php">Assignment 1</a>
-      <a href="../week2/patient_form.php">Patient Intake Form</a>
-      <a href="../week3/atm.php">ATM Calculator</a>
-      <a href="../week4/index.php">Patients</a>
-      <a href="../week5/index.php">Assignment 5</a>
-      <a href="../week6/index.php">Assignment 6</a>
-      <a href="../week7/index.php">Assignment 7</a>
-      <a href="../week8/index.php">Assignment 8</a>
-      <a href="../week9/index.php">Assignment 9</a>
-      <a href="../week10/index.php">Assignment 10</a> 
-      <a href="../final_Project/index.php">Final Project</a> 
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <span class="navbar-brand">Schools</span>
     </div>
-  </div> 
-  <a href="../site/heroku_resources.php">Heroku Resources</a>
-  <a href="../site/php_resources.php">PHP Resources</a>
-  <a href="../site/git_resources.php">Git Resources</a>
-  <a href="https://github.com/RussyRuss/Se266">My GitHub Repo</a>
-  <a href="../final_project/index.php">Final Project Proposal</a>
+    <ul class="nav navbar-nav">
+        <li <?php if(basename($_SERVER['PHP_SELF']) == 'upload.php'): ?>class="active"<?php endif; ?>><a href="upload.php">Upload</a></li>
+        <li <?php if(basename($_SERVER['PHP_SELF']) == 'search.php'): ?>class="active"<?php endif; ?>><a href="search.php">Search</a></li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="logoff.php"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+    </ul>
+  </div>
+</nav>
   
-</div>
-<script>
-/* When the user clicks on the button, 
-toggle between hiding and showing the dropdown content */
-function dropDown() {
-  document.getElementById("myDropdown").classList.toggle("show");
-}
-// Close the dropdown if the user clicks outside of it
-window.onclick = function(e) {
-  if (!e.target.matches('.dropbtn')) {
-  var myDropdown = document.getElementById("myDropdown");
-    if (myDropdown.classList.contains('show')) {
-      myDropdown.classList.remove('show');
-    }
-  }
-}
-</script>
+<div class="container">

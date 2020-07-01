@@ -1,4 +1,4 @@
-<?php include __DIR__ . '/../include/header.php'; ?>
+
 
 <?php
 
@@ -17,4 +17,4 @@ $task = [ //title, due, assigned_to, completed
 
 
 
-require 'index.view.php';
+require 'index_prac2.php';

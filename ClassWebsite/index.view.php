@@ -1,5 +1,4 @@
-<?php include __DIR__ . '/../include/header.php'; ?>
-
+<?php include_once __DIR__ . "/index_prac2.php"; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-
+<a href="https://github.com/RussyRuss/Se266">My GitHub Repo</a>
 <h1>Task For the Day</h1>
     <ul><br>
         

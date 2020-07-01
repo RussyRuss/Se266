@@ -81,24 +81,13 @@ li {
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-content" id="myDropdown">
-      <a href="../week1/index.php">Assignment 1</a>
-      <a href="../week2/patient_form.php">Patient Intake Form</a>
-      <a href="../week3/atm.php">ATM Calculator</a>
-      <a href="../week4/index.php">Patients</a>
-      <a href="../week5/index.php">Assignment 5</a>
-      <a href="../week6/index.php">Assignment 6</a>
-      <a href="../week7/index.php">Assignment 7</a>
-      <a href="../week8/index.php">Assignment 8</a>
-      <a href="../week9/index.php">Assignment 9</a>
-      <a href="../week10/index.php">Assignment 10</a> 
-      <a href="../final_Project/index.php">Final Project</a> 
+    <a href="https://github.com/RussyRuss/Se266">My GitHub Repo</a>
+      
     </div>
   </div> 
-  <a href="../site/heroku_resources.php">Heroku Resources</a>
-  <a href="../site/php_resources.php">PHP Resources</a>
-  <a href="../site/git_resources.php">Git Resources</a>
+  
   <a href="https://github.com/RussyRuss/Se266">My GitHub Repo</a>
-  <a href="../final_project/index.php">Final Project Proposal</a>
+ 
   
 </div>
 <script>

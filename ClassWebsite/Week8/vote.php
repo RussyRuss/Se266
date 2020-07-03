@@ -1,24 +1,38 @@
-<?php include __DIR__ . '/../include/header.php'; ?>
-    
-<h1>PHP and MySQL -Russel Souffrant</h1>
-<p>
-Russel's PHP and MySQL page that will present to you my assignments through out the course.
-</p>
-<h2>Assignment Overview</h2>
+<?php
 
-  <ul>
-    <li><a href="../week1/index.php">Week 1</a></li>
-    <li><a href="../week2/index.php">Week 2</a></li>
-    <li><a href="../week3/index.php">Week 3</a></li>
-    <li><a href="../week4/index.php">Week 4</a></li>
-    <li><a href="../week5/index.php">Week 5</a></li>
-    <li><a href="../week6/index.php">Week 6</a></li>
-    <li><a href="../week7/index.php">Week 7</a></li>
-    <li><a href="../week8/index.php">Week 8</a></li>
-    <li><a href="../week9/index.php">Week 9</a></li>
-    <li><a href="../week10/index.php">Week 10</a></li>
-  </ul>
-    
+include (__DIR__ . '/models/model_votes.php');
+$contentType = isset($_SERVER["CONTENT_TYPE"]) ? trim($_SERVER["CONTENT_TYPE"]) : '';
 
-    
-  <?php include __DIR__ . '/../include/footer.php'; ?>
+if ($contentType == "application/json") {
+
+    $content = trim(file_get_contents("php://input"));
+    $decoded = json_decode($content, true);
+    $action = $decoded['action'];
+
+    if ($action == "insert") {
+        insertVote ($decoded['DisneyCharacterID']);
+        echo json_encode(getVotes());
+        
+    }
+    else if ($action == "getCharacter") {
+        
+        echo json_encode(getCharacter($decoded['DisneyCharacterID']));
+    } else if ($action == "getVote") {
+        $votes = getVotes();    
+
+        //an array for results
+        $results = array();
+        $results[0] = array(); 
+        $results[1] = array (); 
+
+        foreach ($votes as $v) {
+
+            //pushing each result to either the character name and the vote count
+            array_push($results[0], $v['DisneyCharacterName']);
+            array_push($results[1], $v['VoteCount']);
+            
+        }
+        //echoing the results for them to be displayed on the page
+        echo json_encode($results);
+    }
+}
